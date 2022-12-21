@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'San Francisco';
+  src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff');
+}
+body {
+  font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #fcfcfc;
+}
+h1 {
+  font-weight: 200;
+  color: #7209b7;
+}
+span {
+  font-weight: bold;
+}
+.container {
+  max-width: 655px;
+  margin: 0 auto;
+}
+.progress {
+  padding: 0px;
+  margin-bottom: 10vh;
+  width: 100%;
+  height: 2px;
+  background: #e9ecee;
+}
+.progress-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: 20%;
+  height: 2px;
+  background: #7209b7;
+  flex: none;
+  order: 0;
+  flex-grow: 1;
+}
+.bg-time {
+  background: #f3f5f5;
+  border-radius: 10px;
+  width: 379px;
+  height: 140px;
+  margin: 0 auto;
+}
+.time {
+  font-size: 120px;
+  text-align: center;
+  color: rgba(222, 223, 224, 1);
+}
+.planet {
+  width: 347px;
+  height: 347px;
+  border-radius: 100%;
+  margin: 15% auto;
+  background: url(./assets/space.gif) no-repeat 100%;
+}
+
+/*  ---------------- Button ----------------  */
+.btn {
+  text-align: center;
+}
+.btn .outline {
+  background: none;
+  border: 2px solid #7209b7;
+  color: #7209b7;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  width: 150px;
+  border-radius: 10px;
+  color: #e9ecee;
+  height: 50px;
+  cursor: pointer;
+  font-size: 20px;
+  background: #7209b7;
+  border: 2px solid transparent;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
+  transition: 500ms;
+}
+
+button:after {
+  /* content: ''; */
+  transform: translateX(-55px) translateY(-40px);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0px 0px 50px transparent;
+  transition: 500ms;
+}
+
+button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+button:focus {
+  outline: none;
+}
