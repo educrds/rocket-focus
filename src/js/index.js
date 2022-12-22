@@ -24,6 +24,7 @@ planetsBtn.forEach((btn) =>
 
 function restart() {
   clearInterval(timer);
+  document.title = 'Rocket Focus'
   minute = '00';
   second = '00';
 
@@ -48,8 +49,10 @@ function start() {
     }
     --seconds;
 
-    secondLabel.textContent = pad(seconds % 60);
+    document.title = `${pad(parseInt(seconds / 60))}:${pad(seconds % 60)} - Rocket Focus`
+    
     minuteLabel.textContent = pad(parseInt(seconds / 60));
+    secondLabel.textContent = pad(seconds % 60);
 
     let secondsPercentage = (seconds * 100) / totalSeconds;
     progressBar.style.width = `${secondsPercentage}%`;
