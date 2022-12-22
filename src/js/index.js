@@ -3,6 +3,9 @@ const startButton = document.querySelectorAll('.btn')[1];
 
 const minuteLabel = document.getElementById('min');
 const secondLabel = document.getElementById('sec');
+
+const planet = document.querySelector('.planet');
+
 let timer;
 
 // Restart Button Event
@@ -10,6 +13,8 @@ restartButton.addEventListener('click', restart);
 
 function restart() {
   clearInterval(timer);
+  planet.style.animation = 'none';
+
   minute = '00';
   second = '00';
 
@@ -21,43 +26,16 @@ function restart() {
 startButton.addEventListener('click', start);
 
 function start() {
-  var totalSeconds = minuteLabel.textContent * 60;
+  let totalSeconds = minuteLabel.textContent * 60;
 
-  if (totalSeconds <= '00') {
-    return;
-  } else {
-  }
+  planet.style.animation = `orbit linear ${totalSeconds}s`;
+
   timer = setInterval(() => {
+    if (totalSeconds === 0) {
+      return restart();
+    }
     --totalSeconds;
     secondLabel.innerHTML = totalSeconds % 60;
     minuteLabel.innerHTML = parseInt(totalSeconds / 60);
   }, 1000);
 }
-
-// let cron;
-
-// // document.form_main.start.onclick = () => start();
-// // document.form_main.pause.onclick = () => pause();
-// // document.form_main.reset.onclick = () => reset();
-
-// function start() {
-//   pause();
-//   cron = setInterval(() => { timer(); }, 10);
-// }
-
-// function pause() {
-//   clearInterval(cron);
-// }
-
-// function timer() {
-//   if (second == 60) {
-//     second = 0;
-//     minute--;
-//   }
-//   secondLabel.textContent = returnData(second);
-//   secondLabel.textContent = returnData(hour);
-// }
-
-// function returnData(input) {
-//   return input
-// }
