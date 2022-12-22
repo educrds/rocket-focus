@@ -16,7 +16,23 @@
   </head>
   <body>
     <div class="container">
-      <h1>Rocket<span>Focus</span></h1>
+      <nav>
+        <h1>Rocket<span>Focus</span></h1>
+        <div>
+          <button id="earth" class="planets">
+            <img src="../assets/earth.png" alt="earth" />
+          </button>
+          <button id="mars" class="planets">
+            <img src="../assets/mars.png" alt="mars" />
+          </button>
+          <button id="moon" class="planets">
+            <img src="../assets/moon.png" alt="moon" />
+          </button>
+          <button id="jupyter" class="planets">
+            <img src="../assets/jupyter.png" alt="jupyter" />
+          </button>
+        </div>
+      </nav>
       <div class="progress">
         <div class="progress-bar"></div>
       </div>
@@ -26,13 +42,7 @@
         </div>
       </div>
       <div class="planet">
-        <lottie-player
-          src="https://assets4.lottiefiles.com/private_files/lf30_hueeaqbh.json"
-          
-          speed="0.5"
-          loop
-          autoplay
-        ></lottie-player>
+        <img src="../assets/moon.png" alt="" id="planet-image" />
         <lottie-player
           src="https://lottie.host/467ec60c-e77e-4fae-b508-34f82fecbb82/gFMn0CdIa6.json"
           class="rocket"
