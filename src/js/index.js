@@ -84,6 +84,7 @@ function start() {
 
   timer = setInterval(() => {
     if (seconds === 0) {
+      alert.play();
       return restart();
     }
     --seconds;
