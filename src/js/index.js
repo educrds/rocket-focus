@@ -36,7 +36,7 @@ modalContent.addEventListener(
 planetsBtn.forEach((btn) =>
   btn.addEventListener('click', () => {
     const buttonID = btn.id;
-    planetImage.src = `../assets/imgs/${buttonID}.png`;
+    planetImage.src = `./assets/imgs/${buttonID}.png`;
 
     switch (buttonID) {
       case 'mars':
