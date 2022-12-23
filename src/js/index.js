@@ -4,6 +4,9 @@ const startButton = document.querySelectorAll('.btn')[1];
 const minuteLabel = document.getElementById('min');
 const secondLabel = document.getElementById('sec');
 
+const modalBtn = document.querySelector('.main');
+const modalContent = document.querySelector('.content');
+
 const planet = document.querySelector('.planet');
 const planetsBtn = document.querySelectorAll('.planets');
 const planetImage = document.getElementById('planet-image');
@@ -14,22 +17,30 @@ let timer;
 // Restart Button Event
 restartButton.addEventListener('click', restart);
 
+modalBtn.addEventListener(
+  'mouseover', 
+() => (modalContent.style.display = 'block'));
+
+modalContent.addEventListener(
+  'mouseleave',
+  () => (modalContent.style.display = 'none')
+);
+
 planetsBtn.forEach((btn) =>
   btn.addEventListener('click', () => {
     planetImage.src = `../assets/${btn.id}.png`;
     document.documentElement.className = btn.id;
-    // document.documentElement.classList.toggle(btn.id);
   })
 );
 
 function restart() {
   clearInterval(timer);
-  document.title = 'Rocket Focus'
+  document.title = 'RocketFocus';
   minute = '00';
   second = '00';
 
   planet.style.animation = 'none';
-  progressBar.style.width = '0%';
+  progressBar.style.width = '100%';
   minuteLabel.textContent = '00';
   secondLabel.textContent = '00';
 }
@@ -49,8 +60,10 @@ function start() {
     }
     --seconds;
 
-    document.title = `${pad(parseInt(seconds / 60))}:${pad(seconds % 60)} - Rocket Focus`
-    
+    document.title = `${pad(parseInt(seconds / 60))}:${pad(
+      seconds % 60
+    )} - RocketFocus`;
+
     minuteLabel.textContent = pad(parseInt(seconds / 60));
     secondLabel.textContent = pad(seconds % 60);
 

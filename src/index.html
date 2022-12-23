@@ -7,30 +7,29 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
     <link rel="stylesheet" href="../src/css/styles.css" />
-    <link
-      rel="shortcut icon"
-      href="https://cdn-icons-png.flaticon.com/512/1055/1055646.png"
-      type="image/x-icon"
-    />
-    <title>Rocket Focus</title>
+    <link rel="shortcut icon" href="../assets/rocket.svg" type="image/x-icon" />
+    <title>RocketFocus</title>
   </head>
   <body>
     <div class="container">
       <nav>
         <h1>Rocket<span>Focus</span></h1>
-        <div>
-          <button id="earth" class="planets">
-            <img src="../assets/earth.png" alt="earth" />
-          </button>
-          <button id="mars" class="planets">
-            <img src="../assets/mars.png" alt="mars" />
-          </button>
-          <button id="moon" class="planets">
-            <img src="../assets/moon.png" alt="moon" />
-          </button>
-          <button id="jupyter" class="planets">
-            <img src="../assets/jupyter.png" alt="jupyter" />
-          </button>
+        <div class="modal">
+            <img class="main" src="../assets/setting.svg" alt="setting icon" />
+          <div class="content">
+            <button id="moon" class="planets">
+              <img src="../assets/moon.png" alt="moon" />
+            </button>
+            <button id="earth" class="planets">
+              <img src="../assets/earth.png" alt="earth" />
+            </button>
+            <button id="mars" class="planets">
+              <img src="../assets/mars.png" alt="mars" />
+            </button>
+            <button id="jupyter" class="planets">
+              <img src="../assets/jupyter.png" alt="jupyter" />
+            </button>
+          </div>
         </div>
       </nav>
       <div class="progress">
