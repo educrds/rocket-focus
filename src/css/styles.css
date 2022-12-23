@@ -107,12 +107,12 @@ nav img {
 /* Time Label */
 
 .bg-time {
-  /* background: var(--secondary-color); */
+  background: var(--secondary-color);
   border-radius: 0.5rem;
   width: 305px;
   margin: auto;
   position: relative;
-  /* box-shadow: rgba(0, 0, 0, 0.1) 1.95px 1.95px 2.6px; */
+  box-shadow: rgba(0, 0, 0, 0.1) 1.95px 1.95px 2.6px;
 }
 
 .time {
