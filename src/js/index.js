@@ -4,22 +4,29 @@ const startButton = document.querySelectorAll('.btn')[1];
 const minuteLabel = document.getElementById('min');
 const secondLabel = document.getElementById('sec');
 
+const alert = new Audio('../../assets/sound/beep-beep.mp3');
+
 const modalBtn = document.querySelector('.main');
 const modalContent = document.querySelector('.content');
 
 const planet = document.querySelector('.planet');
 const planetsBtn = document.querySelectorAll('.planets');
 const planetImage = document.getElementById('planet-image');
+
+const themeBtn = document.querySelector('.theme');
+
 const progressBar = document.querySelector('.progress-bar');
 
 let timer;
 
 // Restart Button Event
 restartButton.addEventListener('click', restart);
+themeBtn.addEventListener('click', () => {
+  document.documentElement.classList.toggle('dark');
+  themeIcon.src = './assets/imgs/sun.png';
+});
 
-modalBtn.addEventListener(
-  'mouseover', 
-() => (modalContent.style.display = 'block'));
+modalBtn.addEventListener('mouseover', () => (modalContent.style.display = 'block'));
 
 modalContent.addEventListener(
   'mouseleave',
@@ -28,8 +35,29 @@ modalContent.addEventListener(
 
 planetsBtn.forEach((btn) =>
   btn.addEventListener('click', () => {
-    planetImage.src = `../assets/${btn.id}.png`;
-    document.documentElement.className = btn.id;
+    const buttonID = btn.id;
+    planetImage.src = `../assets/imgs/${buttonID}.png`;
+
+    switch (buttonID) {
+      case 'mars':
+        document.documentElement.style.setProperty('--main-color', '#de7432');
+        break;
+
+      case 'jupyter':
+        document.documentElement.style.setProperty('--main-color', '#5f27e6');
+        break;
+
+      case 'earth':
+        document.documentElement.style.setProperty('--main-color', '#333fef');
+        break;
+
+      case 'moon':
+        document.documentElement.style.setProperty('--main-color', '#616161');
+        break;
+
+      default:
+        break;
+    }
   })
 );
 

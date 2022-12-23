@@ -1,25 +1,19 @@
-:root {
+.dark:root {
+  --primary-color: #131926;
+  --secondary-color: #252f47;
+  --icon: url('../../assets/imgs/sun.png');
   --main-color: #616161;
 }
-.jupyter:root {
-  --main-color: #5f27e6;
-}
 
-.earth:root {
-  --main-color: #333fef;
-}
-
-.mars:root {
-  --main-color: #de7432;
-}
-
-@font-face {
-  font-family: 'San Francisco';
-  src: url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff');
+:root {
+  --primary-color: #fcfcfc;
+  --secondary-color: #f3f5f5;
+  --icon: url('../../assets/imgs/moon-theme.png');
+  --main-color: #616161;
 }
 body {
-  font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: #fcfcfc;
+  font-family: 'Roboto Mono', monospace;
+  background-color: var(--primary-color);
   overflow-x: hidden;
 }
 h1 {
@@ -48,11 +42,14 @@ nav img {
   width: 36px;
   cursor: pointer;
 }
+
+/* Modal Box */
+
 .modal {
   position: relative;
 }
 .content {
-  background-color: #e9ecee;
+  background-color: var(--secondary-color);
   box-shadow: rgba(0, 0, 0, 0.1) 1.95px 1.95px 2.6px;
 }
 
@@ -74,11 +71,15 @@ nav img {
   z-index: 1;
   right: 0;
   top: 50px;
-  width: 202px;
+  width: 285px;
   margin: auto;
   overflow: hidden;
 }
 
+.theme img {
+  content: var(--icon);
+  height: 36px;
+}
 /* Progress Bar */
 
 .progress {
@@ -86,7 +87,7 @@ nav img {
   margin: 1vh 0 3vh;
   width: 100%;
   height: 2px;
-  background: #e9ecee;
+  background: var(--secondary-color);
 }
 .progress-bar {
   display: flex;
@@ -105,14 +106,16 @@ nav img {
 /* Time Label */
 
 .bg-time {
-  background: #f3f5f5;
+  /* background: var(--secondary-color); */
   border-radius: 0.5rem;
   width: 305px;
   margin: auto;
   position: relative;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 1.95px 1.95px 2.6px; */
 }
 
 .time {
+  font-family: 'Roboto Mono', monospace;
   font-size: 5rem;
   text-align: center;
   color: var(--main-color);
@@ -131,11 +134,17 @@ nav img {
   margin: 8% auto 6.5%;
   z-index: -1;
   width: fit-content;
+  height: 290px;
 }
 
 .planet img {
   width: 300px;
   z-index: -1;
+}
+
+#jupyter {
+  border-right: 1px solid var(--primary-color);
+  padding-right: 10px;
 }
 
 /* Rocket Icon */

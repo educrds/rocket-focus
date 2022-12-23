@@ -4,10 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- LottieFiles -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="../src/css/styles.css" />
-    <link rel="shortcut icon" href="../assets/rocket.svg" type="image/x-icon" />
+
+    <!-- FavIcon -->
+    <link rel="shortcut icon" href="../assets/imgs/rocket.svg" type="image/x-icon" />
+
+    <!-- Fonts Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
     <title>RocketFocus</title>
   </head>
   <body>
@@ -15,19 +28,22 @@
       <nav>
         <h1>Rocket<span>Focus</span></h1>
         <div class="modal">
-            <img class="main" src="../assets/setting.svg" alt="setting icon" />
+          <img class="main" src="../assets/imgs/gear.png" alt="setting icon" />
           <div class="content">
             <button id="moon" class="planets">
-              <img src="../assets/moon.png" alt="moon" />
+              <img src="../assets/imgs/moon.png" alt="moon" />
             </button>
             <button id="earth" class="planets">
-              <img src="../assets/earth.png" alt="earth" />
+              <img src="../assets/imgs/earth.png" alt="earth" />
             </button>
             <button id="mars" class="planets">
-              <img src="../assets/mars.png" alt="mars" />
+              <img src="../assets/imgs/mars.png" alt="mars" />
             </button>
             <button id="jupyter" class="planets">
-              <img src="../assets/jupyter.png" alt="jupyter" />
+              <img src="../assets/imgs/jupyter.png" alt="jupyter" />
+            </button>
+            <button class="theme">
+              <img src="" />
             </button>
           </div>
         </div>
@@ -41,7 +57,7 @@
         </div>
       </div>
       <div class="planet">
-        <img src="../assets/moon.png" alt="" id="planet-image" />
+        <img src="../assets/imgs/moon.png" alt="" id="planet-image" />
         <lottie-player
           src="https://lottie.host/467ec60c-e77e-4fae-b508-34f82fecbb82/gFMn0CdIa6.json"
           class="rocket"
