@@ -49,6 +49,9 @@ nav img {
 .modal {
   position: relative;
 }
+.setup-icon{
+  width: 28px;
+}
 .content {
   background-color: var(--secondary-color);
   box-shadow: rgba(0, 0, 0, 0.1) 1.95px 1.95px 2.6px;

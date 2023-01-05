@@ -1,20 +1,27 @@
+// Control buttons
 const restartButton = document.querySelectorAll('.btn')[0];
 const startButton = document.querySelectorAll('.btn')[1];
 
+// Time label
 const minuteLabel = document.getElementById('min');
 const secondLabel = document.getElementById('sec');
 
+// Audio alert
 const alert = new Audio('../../assets/sound/beep-beep.mp3');
 
-const modalBtn = document.querySelector('.main');
+// Modal content
+const modalBtn = document.querySelector('.setup-icon');
 const modalContent = document.querySelector('.content');
 
+// Planets button
 const planet = document.querySelector('.planet');
 const planetsBtn = document.querySelectorAll('.planets');
 const planetImage = document.getElementById('planet-image');
 
+// Change theme mode
 const themeBtn = document.querySelector('.theme');
 
+// Progress bar
 const progressBar = document.querySelector('.progress-bar');
 
 let timer;
@@ -77,6 +84,7 @@ function restart() {
 startButton.addEventListener('click', start);
 
 function start() {
+  // const totalSeconds = minuteLabel.textContent * 60;
   const totalSeconds = minuteLabel.textContent * 60;
   let seconds = minuteLabel.textContent * 60;
 
@@ -101,11 +109,10 @@ function start() {
   }, 1000);
 }
 
-function pad(val) {
+const pad = (val) => {
   var valString = val + '';
   if (valString.length < 2) {
     return '0' + valString;
-  } else {
-    return valString;
   }
-}
+  return valString;
+};
